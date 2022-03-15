@@ -1,13 +1,15 @@
+import Link from "next/link";
+
 export default function navbar() {
 
 return (
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">
+<nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link className="navbar-brand" href="/">
           BlogsBlog
-        </a>
+        </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -15,24 +17,24 @@ return (
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item active" id="nav1">
+              <Link className="nav-link" href="/">
                 Home
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/blogs/3">
+            <li className="nav-item" id="nav">
+              <Link className="nav-link" href="/blogs/3">
                 Blogs
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/author/">
+            <li className="nav-item" id="nav">
+              <Link className="nav-link" href="/author/">
                 Authors
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

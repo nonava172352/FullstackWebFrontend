@@ -67,13 +67,13 @@ export default function Details({ cate, cate2, cate3 }) {
         <title>BlogsBlog</title>
       </Head>
       <Navbar />
-      <h1 class="d-flex justify-content-center mt-5">{cate.name}</h1>
+      <h1 className="d-flex justify-content-center mt-5">{cate.name}</h1>
 
-      {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button> */}
 
-      <div class="d-flex justify-content-center" id="cate">
+      <div className="d-flex justify-content-center" id="cate">
       {cate3.map(cate => (
         <Link href={'/blogs/' + cate.id} key={cate.id}>
           <a id="styleCateButton">
@@ -82,29 +82,29 @@ export default function Details({ cate, cate2, cate3 }) {
         </Link>
       ))}</div>
 
-      <div class="d-flex justify-content-center" id="cate">
+      <div className="d-flex justify-content-center" id="cate">
       {cate2.map((con) => (
-        <div class="card" id="stylecard">
-          <div class="card-body">
-            <h5 class="card-title">{con.title.rendered}</h5>
-            <div class="card-text" dangerouslySetInnerHTML={{__html: con.excerpt.rendered}}></div>
-            <div class="mt-3 justify-content-center" id="styleCateButton2">
-            <button type="button" class="btn btn-success w-100 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Readmore</button>
-            <button type="button" class="btn btn-warning w-100">Comment</button>
+        <div className="card" id="stylecard" key={cate2.id}>
+          <div className="card-body">
+            <h5 className="card-title">{con.title.rendered}</h5>
+            <div className="card-text" dangerouslySetInnerHTML={{__html: con.excerpt.rendered}}></div>
+            <div className="mt-3 justify-content-center" id="styleCateButton2">
+            <button type="button" className="btn btn-success w-100 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Readmore</button>
+            <button type="button" className="btn btn-warning w-100">Comment</button>
             </div>
           </div>
              
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{con.title.rendered}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog modal-xl">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">{con.title.rendered}</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" dangerouslySetInnerHTML={{__html: con.content.rendered}}>
+      <div className="modal-body" dangerouslySetInnerHTML={{__html: con.content.rendered}}>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

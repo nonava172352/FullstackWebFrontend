@@ -30,15 +30,15 @@ export default function Home({cate}) {
       </Head>
       <Navbar />
 
-      <h1 class="display-1 d-flex p-5 h-25 justify-content-center align-items-center text-danger">
+      <h1 className="display-1 d-flex p-5 h-25 justify-content-center align-items-center text-danger">
         Welcome to BlogsBlog
       </h1>
 
-      <h1 class="display-6 d-flex justify-content-center">
+      <h1 className="display-6 d-flex justify-content-center">
         Choose your category
       </h1>
       
-      <div class="d-flex justify-content-center" id="cate">
+      <div className="d-flex justify-content-center" id="cate">
       {cate.map(cate => (
         <Link href={'/blogs/' + cate.id} key={cate.id}>
           <a id="styleCateButton">
